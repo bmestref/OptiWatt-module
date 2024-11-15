@@ -4,12 +4,9 @@ import matplotlib.pyplot as plt
 
 
 
-def maximize_cost(precios, produccion, graph = False):
-    # Variables
-    S_max = 15000    
-    B_max = 3000    
-    V_max = 4000    
-    S_init = 4500  
+def maximize_cost(precios, produccion, graph = False, S_max = 15000,
+                  B_max = 3000, V_max = 4000, S_init = 4500):
+ 
     n = 24  # Número de horas
     v = cp.Variable(n)         # Energía vendida al mercado por hora
     b_in = cp.Variable(n)      # Energía que entra a la batería por hora
